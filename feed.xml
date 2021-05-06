@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>Helpfromfriend</title>
-    <link href="https://github-pages.github.io/helpfromfriend.com/feed.xml" rel="self" />
-    <link href="https://github-pages.github.io/helpfromfriend.com" />
+    <title>Help from a friend</title>
+    <link href="https://helpfromfriend.com/feed.xml" rel="self" />
+    <link href="https://helpfromfriend.com" />
     <updated>2021-05-06T18:28:53+12:00</updated>
     <author>
         <name>nztomas</name>
     </author>
-    <id>https://github-pages.github.io/helpfromfriend.com</id>
+    <id>https://helpfromfriend.com</id>
 
     <entry>
         <title>Where to host your wordpress site?</title>
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/where-to-host-your-wordpress-site/"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/where-to-host-your-wordpress-site/</id>
+        <link href="https://helpfromfriend.com/where-to-host-your-wordpress-site/"/>
+        <id>https://helpfromfriend.com/where-to-host-your-wordpress-site/</id>
             <category term="Wordpress"/>
 
         <updated>2021-05-06T18:09:30+12:00</updated>
@@ -39,8 +39,8 @@
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/installing-hp-printerscanner-in-linux/"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/installing-hp-printerscanner-in-linux/</id>
+        <link href="https://helpfromfriend.com/installing-hp-printerscanner-in-linux/"/>
+        <id>https://helpfromfriend.com/installing-hp-printerscanner-in-linux/</id>
             <category term="Printing"/>
             <category term="Linux"/>
 
@@ -68,8 +68,8 @@
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-convert-pnm-to-pdf/"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-convert-pnm-to-pdf/</id>
+        <link href="https://helpfromfriend.com/how-to-convert-pnm-to-pdf/"/>
+        <id>https://helpfromfriend.com/how-to-convert-pnm-to-pdf/</id>
             <category term="Linux"/>
 
         <updated>2021-05-06T18:09:58+12:00</updated>
@@ -95,8 +95,8 @@
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-ui-in-linux/"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-ui-in-linux/</id>
+        <link href="https://helpfromfriend.com/how-to-fix-eclipse-ui-in-linux/"/>
+        <id>https://helpfromfriend.com/how-to-fix-eclipse-ui-in-linux/</id>
             <category term="Linux"/>
             <category term="Eclipse"/>
 
@@ -120,8 +120,8 @@
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-install-deadbeef-in-ubuntu/"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-install-deadbeef-in-ubuntu/</id>
+        <link href="https://helpfromfriend.com/how-to-install-deadbeef-in-ubuntu/"/>
+        <id>https://helpfromfriend.com/how-to-install-deadbeef-in-ubuntu/</id>
             <category term="Linux"/>
 
         <updated>2021-05-06T18:25:41+12:00</updated>
@@ -143,8 +143,8 @@
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-and-preferenceconverter-exception/"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-and-preferenceconverter-exception/</id>
+        <link href="https://helpfromfriend.com/how-to-fix-eclipse-and-preferenceconverter-exception/"/>
+        <id>https://helpfromfriend.com/how-to-fix-eclipse-and-preferenceconverter-exception/</id>
             <category term="Linux"/>
             <category term="Eclipse"/>
 
@@ -171,8 +171,8 @@
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/activemq-startup-problems-on-windows/"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/activemq-startup-problems-on-windows/</id>
+        <link href="https://helpfromfriend.com/activemq-startup-problems-on-windows/"/>
+        <id>https://helpfromfriend.com/activemq-startup-problems-on-windows/</id>
             <category term="Windows"/>
             <category term="Java"/>
 
@@ -265,8 +265,8 @@ apache-activemq-5.5.0\bin\win32\work\
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-install-software-for-canon-cameras/"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-install-software-for-canon-cameras/</id>
+        <link href="https://helpfromfriend.com/how-to-install-software-for-canon-cameras/"/>
+        <id>https://helpfromfriend.com/how-to-install-software-for-canon-cameras/</id>
             <category term="Windows"/>
             <category term="Canon"/>
 
@@ -300,8 +300,8 @@ apache-activemq-5.5.0\bin\win32\work\
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-fix-google-sync-authentication-errors/"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-fix-google-sync-authentication-errors/</id>
+        <link href="https://helpfromfriend.com/how-to-fix-google-sync-authentication-errors/"/>
+        <id>https://helpfromfriend.com/how-to-fix-google-sync-authentication-errors/</id>
             <category term="Google"/>
 
         <updated>2021-05-06T18:28:17+12:00</updated>
@@ -325,8 +325,8 @@ apache-activemq-5.5.0\bin\win32\work\
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-remove-andquotlike-thisandquot-from-google-reader/"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-remove-andquotlike-thisandquot-from-google-reader/</id>
+        <link href="https://helpfromfriend.com/how-to-remove-andquotlike-thisandquot-from-google-reader/"/>
+        <id>https://helpfromfriend.com/how-to-remove-andquotlike-thisandquot-from-google-reader/</id>
             <category term="Google"/>
 
         <updated>2021-05-06T18:28:53+12:00</updated>

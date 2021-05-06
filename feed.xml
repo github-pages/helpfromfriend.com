@@ -3,7 +3,7 @@
     <title>Helpfromfriend</title>
     <link href="https://github-pages.github.io/helpfromfriend.com/feed.xml" rel="self" />
     <link href="https://github-pages.github.io/helpfromfriend.com" />
-    <updated>2021-05-01T06:06:12+12:00</updated>
+    <updated>2021-05-06T18:10:06+12:00</updated>
     <author>
         <name>nztomas</name>
     </author>
@@ -16,21 +16,21 @@
         </author>
         <link href="https://github-pages.github.io/helpfromfriend.com/where-to-host-your-wordpress-site.html"/>
         <id>https://github-pages.github.io/helpfromfriend.com/where-to-host-your-wordpress-site.html</id>
+            <category term="Wordpress"/>
 
-        <updated>2021-05-01T06:06:12+12:00</updated>
+        <updated>2021-05-06T18:09:30+12:00</updated>
             <summary>
                 <![CDATA[
-                    <p>This week I was deciding where to migrate my wordpress sites as the current hosting at the <a href="https://www.appfog.com/" target="_blank">Appfog</a> is going to migrate to a new version of their platform which is not very well suited for our needs any more. There is hundreds and hundreds hosting solutions out there, some of them specialised purely on wordpress (ie. <strong>wordpress.com</strong>), some offering virtual machines (<strong>Amazon</strong> or <strong>Digital Ocean</strong>) or PaaS (as <strong>Appfog</strong> or <strong>Heroku</strong>). But I was after something fairly simple with little administration overhead and a with good pricetag. And then I've found <a href="http://j.mp/payperhost" target="_blank">Payperhost.com</a>.</p>
+                    <p>This week I was deciding where to migrate my wordpress sites as the current hosting at the <a href="https://www.appfog.com/" target="_blank" rel="noopener">Appfog</a> is going to migrate to a new version of their platform which is not very well suited for our needs any more. There is hundreds and hundreds hosting solutions out there, some of them specialised purely on wordpress (ie. <strong>wordpress.com</strong>), some offering virtual machines (<strong>Amazon</strong> or <strong>Digital Ocean</strong>) or PaaS (as <strong>Appfog</strong> or <strong>Heroku</strong>). But I was after something fairly simple with little administration overhead and a with good pricetag. And then I've found <a href="http://j.mp/payperhost" target="_blank" rel="noopener">Payperhost.com</a>.</p>
 
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>This week I was deciding where to migrate my wordpress sites as the current hosting at the <a href="https://www.appfog.com/" target="_blank">Appfog</a> is going to migrate to a new version of their platform which is not very well suited for our needs any more. There is hundreds and hundreds hosting solutions out there, some of them specialised purely on wordpress (ie. <strong>wordpress.com</strong>), some offering virtual machines (<strong>Amazon</strong> or <strong>Digital Ocean</strong>) or PaaS (as <strong>Appfog</strong> or <strong>Heroku</strong>). But I was after something fairly simple with little administration overhead and a with good pricetag. And then I've found <a href="http://j.mp/payperhost" target="_blank">Payperhost.com</a>.</p>
+                <p>This week I was deciding where to migrate my wordpress sites as the current hosting at the <a href="https://www.appfog.com/" target="_blank" rel="noopener">Appfog</a> is going to migrate to a new version of their platform which is not very well suited for our needs any more. There is hundreds and hundreds hosting solutions out there, some of them specialised purely on wordpress (ie. <strong>wordpress.com</strong>), some offering virtual machines (<strong>Amazon</strong> or <strong>Digital Ocean</strong>) or PaaS (as <strong>Appfog</strong> or <strong>Heroku</strong>). But I was after something fairly simple with little administration overhead and a with good pricetag. And then I've found <a href="http://j.mp/payperhost" target="_blank" rel="noopener">Payperhost.com</a>.</p>
 
 <p>These guys claim to have a extensive experience with classic hosting solutions in Europe and they've decided to find a hole in the market and offer fast a cheap php hosting with pay as you go pricing. The hosting features are impressive - 2 locations (US and EU), both data &amp; database on SSD drives, PHP scripts pre-compiled and served from memory and of course automatic backups. And the best thing is very aggressive pricing - little websites like this one cost <strong>US$1 per month</strong> (yes your are reading correct!).</p>
-<p>They also offer reseller hosting with even better pricing and standard affiliate account with 20% fee. So if you are looking for fair and simple pricing with no hidden fees, <a href="http://j.mp/payperhost" target="_blank">give it a try</a>. We've moved all our wordpress sites there and we are not looking back...</p>
-
+<p>They also offer reseller hosting with even better pricing and standard affiliate account with 20% fee. So if you are looking for fair and simple pricing with no hidden fees, <a href="http://j.mp/payperhost" target="_blank" rel="noopener">give it a try</a>. We've moved all our wordpress sites there and we are not looking back...</p>
             ]]>
         </content>
     </entry>
@@ -41,8 +41,9 @@
         </author>
         <link href="https://github-pages.github.io/helpfromfriend.com/installing-hp-printerscanner-in-linux.html"/>
         <id>https://github-pages.github.io/helpfromfriend.com/installing-hp-printerscanner-in-linux.html</id>
+            <category term="Linux"/>
 
-        <updated>2021-05-01T06:06:12+12:00</updated>
+        <updated>2021-05-06T18:10:06+12:00</updated>
             <summary>
                 <![CDATA[
                     <p>After updating my laptop to new version of Linux Mint (17.2) I found out that I can't print on my network HP printer. I've tried to re-install HP drivers but it wasn't as smooth as I thought. HP installation script kept refusing to install new version of their driver and kept telling me that the file doesn't match the checksum and that is probably corrupted. So in case if any of you would have similar issues, here is the super simple how-to.</p>
@@ -54,13 +55,10 @@
                 <p>After updating my laptop to new version of Linux Mint (17.2) I found out that I can't print on my network HP printer. I've tried to re-install HP drivers but it wasn't as smooth as I thought. HP installation script kept refusing to install new version of their driver and kept telling me that the file doesn't match the checksum and that is probably corrupted. So in case if any of you would have similar issues, here is the super simple how-to.</p>
 
 <p>First try to update/install the hplib package and run their scripts as maybe you are just lucky and it would work from scratch for you.</p>
-<pre>sudo apt-get install hplip<restore-line-break>hp-check<restore-line-break>hp-doctor</pre>
-<p>
-In case you see following error:</p>
-<pre>Downloading plug-in from:<restore-line-break> error: Plugin download failed with error code = 8<restore-line-break> error: file does not match its checksum. File may have been corrupted or altered</pre>
-<p>
-You will need to install new drivers manually - download both <a title="hplip-3.15.2-plugin.run.asc" href="https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.15.2-plugin.run.asc" target="_blank">hplip-3.15.2-plugin.run.asc</a> and <a title="hplip-3.15.2-plugin.run" href="https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.15.2-plugin.run" target="_blank">hplip-3.15.2-plugin.run</a> files from the url below and put them into new directory. The go in the new directory run 'sh hplip-3.15.2-plugin.run' and follow the instructions...</p>
-
+<pre>sudo apt-get install hpliphp-checkhp-doctor</pre>
+<p>In case you see following error:</p>
+<pre>Downloading plug-in from: error: Plugin download failed with error code = 8 error: file does not match its checksum. File may have been corrupted or altered</pre>
+<p>You will need to install new drivers manually - download both <a title="hplip-3.15.2-plugin.run.asc" href="https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.15.2-plugin.run.asc" target="_blank" rel="noopener">hplip-3.15.2-plugin.run.asc</a> and <a title="hplip-3.15.2-plugin.run" href="https://www.openprinting.org/download/printdriver/auxfiles/HP/plugins/hplip-3.15.2-plugin.run" target="_blank" rel="noopener">hplip-3.15.2-plugin.run</a> files from the url below and put them into new directory. The go in the new directory run 'sh hplip-3.15.2-plugin.run' and follow the instructions...</p>
             ]]>
         </content>
     </entry>
@@ -71,8 +69,9 @@ You will need to install new drivers manually - download both <a title="hplip-3
         </author>
         <link href="https://github-pages.github.io/helpfromfriend.com/how-to-convert-pnm-to-pdf.html"/>
         <id>https://github-pages.github.io/helpfromfriend.com/how-to-convert-pnm-to-pdf.html</id>
+            <category term="Linux"/>
 
-        <updated>2021-05-01T06:06:11+12:00</updated>
+        <updated>2021-05-06T18:09:58+12:00</updated>
             <summary>
                 <![CDATA[
                     Recently I've bought a new laser printer from HP and I started to use XSane for scanning - unfortunately the&hellip;
@@ -82,13 +81,11 @@ You will need to install new drivers manually - download both <a title="hplip-3
             <![CDATA[
                 <p>Recently I've bought a new laser printer from HP and I started to use XSane for scanning - unfortunately the program produces .pnm file for every scanned page and even though these are quite big and pretty much useless for attaching to emails and so. I've come up with following solution which works for me:</p>
 <p>You will need ImageMagick and GhostScript (but very probable you have them both already installed) - if not:</p>
-<pre>sudo apt-get install imagemagick<restore-line-break>sudo apt-get install imagemagick</pre>
-<p>
-And then you can run two following commands to get nice and lightweight single PDF file generated from your .PNM files:</p>
-<pre>convert out-000* concatenated.pdf<restore-line-break>gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf concatenated.pdf</pre>
-<p>
-I'm just wondering if anyone has some better or simpler way how to deal with these .pnm files and would like to share it in the comments?</p>
-
+<pre>sudo apt-get install imagemagicksudo apt-get install imagemagick</pre>
+<p>And then you can run two following commands to get nice and lightweight single PDF file generated from your .PNM files:</p>
+<pre>convert out-000* concatenated.pdfgs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf concatenated.pdf</pre>
+<p>I'm just wondering if anyone has some better or simpler way how to deal with these .pnm files and would like to share it in the comments?</p>
+<p> </p>
             ]]>
         </content>
     </entry>

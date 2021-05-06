@@ -3,7 +3,7 @@
     <title>Helpfromfriend</title>
     <link href="https://github-pages.github.io/helpfromfriend.com/feed.xml" rel="self" />
     <link href="https://github-pages.github.io/helpfromfriend.com" />
-    <updated>2021-05-06T18:10:06+12:00</updated>
+    <updated>2021-05-06T18:18:33+12:00</updated>
     <author>
         <name>nztomas</name>
     </author>
@@ -14,8 +14,8 @@
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/where-to-host-your-wordpress-site.html"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/where-to-host-your-wordpress-site.html</id>
+        <link href="https://github-pages.github.io/helpfromfriend.com/where-to-host-your-wordpress-site/"/>
+        <id>https://github-pages.github.io/helpfromfriend.com/where-to-host-your-wordpress-site/</id>
             <category term="Wordpress"/>
 
         <updated>2021-05-06T18:09:30+12:00</updated>
@@ -39,11 +39,12 @@
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/installing-hp-printerscanner-in-linux.html"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/installing-hp-printerscanner-in-linux.html</id>
+        <link href="https://github-pages.github.io/helpfromfriend.com/installing-hp-printerscanner-in-linux/"/>
+        <id>https://github-pages.github.io/helpfromfriend.com/installing-hp-printerscanner-in-linux/</id>
+            <category term="Printing"/>
             <category term="Linux"/>
 
-        <updated>2021-05-06T18:10:06+12:00</updated>
+        <updated>2021-05-06T18:18:33+12:00</updated>
             <summary>
                 <![CDATA[
                     <p>After updating my laptop to new version of Linux Mint (17.2) I found out that I can't print on my network HP printer. I've tried to re-install HP drivers but it wasn't as smooth as I thought. HP installation script kept refusing to install new version of their driver and kept telling me that the file doesn't match the checksum and that is probably corrupted. So in case if any of you would have similar issues, here is the super simple how-to.</p>
@@ -67,8 +68,8 @@
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-convert-pnm-to-pdf.html"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-convert-pnm-to-pdf.html</id>
+        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-convert-pnm-to-pdf/"/>
+        <id>https://github-pages.github.io/helpfromfriend.com/how-to-convert-pnm-to-pdf/</id>
             <category term="Linux"/>
 
         <updated>2021-05-06T18:09:58+12:00</updated>
@@ -94,10 +95,13 @@
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-ui-in-linux.html"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-ui-in-linux.html</id>
+        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-ui-in-linux/"/>
+        <id>https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-ui-in-linux/</id>
+            <category term="Linux"/>
+            <category term="Java"/>
+            <category term="Eclipse"/>
 
-        <updated>2021-05-01T06:06:11+12:00</updated>
+        <updated>2021-05-06T18:18:03+12:00</updated>
             <summary>
                 <![CDATA[
                     One of the worst thing which can happen to any developer is when the tool he uses 8+ hours per&hellip;
@@ -107,12 +111,8 @@
             <![CDATA[
                 <p>One of the worst thing which can happen to any developer is when the tool he uses 8+ hours per day suddenly changes the UI. This is the case of the new version of Eclipse on linux distributions - the GTK layout simply uses huge fonts and other elements so the whole workbench is just terribly useless. There is nothing simply you could do in the Eclipse settings for changing this behaviour but some smart guy came up with custom gtk theme which puts things back to order - so shutdown eclipse and do the following:</p>
 <pre>vim ~/.gtkrc-2.0</pre>
-<p>
-And put there:</p>
-<pre>style "gtkcompact" {<restore-line-break>font_name="Sans 8"<restore-line-break>GtkButton::default_border={0,0,0,0}<restore-line-break>GtkButton::default_outside_border={0,0,0,0}<restore-line-break>GtkButtonBox::child_min_width=0<restore-line-break>GtkButtonBox::child_min_heigth=0<restore-line-break>GtkButtonBox::child_internal_pad_x=0<restore-line-break>GtkButtonBox::child_internal_pad_y=0<restore-line-break>GtkMenu::vertical-padding=1<restore-line-break>GtkMenuBar::internal_padding=0<restore-line-break>GtkMenuItem::horizontal_padding=4<restore-line-break>GtkToolbar::internal-padding=0<restore-line-break>GtkToolbar::space-size=0<restore-line-break>GtkOptionMenu::indicator_size=0<restore-line-break>GtkOptionMenu::indicator_spacing=0<restore-line-break>GtkPaned::handle_size=4<restore-line-break>GtkRange::trough_border=0<restore-line-break>GtkRange::stepper_spacing=0<restore-line-break>GtkScale::value_spacing=0<restore-line-break>GtkScrolledWindow::scrollbar_spacing=0<restore-line-break>GtkExpander::expander_size=10<restore-line-break>GtkExpander::expander_spacing=0<restore-line-break>GtkTreeView::vertical-separator=0<restore-line-break>GtkTreeView::horizontal-separator=0<restore-line-break>GtkTreeView::expander-size=8<restore-line-break>GtkTreeView::fixed-height-mode=TRUE<restore-line-break>GtkWidget::focus_padding=0<restore-line-break>}<restore-line-break>class "GtkWidget" style "gtkcompact"<restore-line-break><restore-line-break>style "gtkcompactextra" {<restore-line-break>xthickness=0<restore-line-break>ythickness=0<restore-line-break>}<restore-line-break>class "GtkButton" style "gtkcompactextra"<restore-line-break>class "GtkToolbar" style "gtkcompactextra"<restore-line-break>class "GtkPaned" style "gtkcompactextra"</pre>
-
-
-
+<p>And put there:</p>
+<pre>style "gtkcompact" {font_name="Sans 8"GtkButton::default_border={0,0,0,0}GtkButton::default_outside_border={0,0,0,0}GtkButtonBox::child_min_width=0GtkButtonBox::child_min_heigth=0GtkButtonBox::child_internal_pad_x=0GtkButtonBox::child_internal_pad_y=0GtkMenu::vertical-padding=1GtkMenuBar::internal_padding=0GtkMenuItem::horizontal_padding=4GtkToolbar::internal-padding=0GtkToolbar::space-size=0GtkOptionMenu::indicator_size=0GtkOptionMenu::indicator_spacing=0GtkPaned::handle_size=4GtkRange::trough_border=0GtkRange::stepper_spacing=0GtkScale::value_spacing=0GtkScrolledWindow::scrollbar_spacing=0GtkExpander::expander_size=10GtkExpander::expander_spacing=0GtkTreeView::vertical-separator=0GtkTreeView::horizontal-separator=0GtkTreeView::expander-size=8GtkTreeView::fixed-height-mode=TRUEGtkWidget::focus_padding=0}class "GtkWidget" style "gtkcompact"style "gtkcompactextra" {xthickness=0ythickness=0}class "GtkButton" style "gtkcompactextra"class "GtkToolbar" style "gtkcompactextra"class "GtkPaned" style "gtkcompactextra"</pre>
             ]]>
         </content>
     </entry>
@@ -121,8 +121,8 @@ And put there:</p>
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-install-deadbeef-in-ubuntu.html"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-install-deadbeef-in-ubuntu.html</id>
+        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-install-deadbeef-in-ubuntu/"/>
+        <id>https://github-pages.github.io/helpfromfriend.com/how-to-install-deadbeef-in-ubuntu/</id>
 
         <updated>2021-05-01T06:06:11+12:00</updated>
             <summary>
@@ -145,8 +145,8 @@ Enjoy!</p>
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-and-preferenceconverter-exception.html"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-and-preferenceconverter-exception.html</id>
+        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-and-preferenceconverter-exception/"/>
+        <id>https://github-pages.github.io/helpfromfriend.com/how-to-fix-eclipse-and-preferenceconverter-exception/</id>
 
         <updated>2021-05-01T06:06:11+12:00</updated>
             <summary>
@@ -175,8 +175,8 @@ That's it - enjoy coding!</p>
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/activemq-startup-problems-on-windows.html"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/activemq-startup-problems-on-windows.html</id>
+        <link href="https://github-pages.github.io/helpfromfriend.com/activemq-startup-problems-on-windows/"/>
+        <id>https://github-pages.github.io/helpfromfriend.com/activemq-startup-problems-on-windows/</id>
 
         <updated>2021-05-01T06:06:11+12:00</updated>
             <summary>
@@ -271,8 +271,8 @@ apache-activemq-5.5.0\bin\win32\work\
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-install-software-for-canon-cameras.html"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-install-software-for-canon-cameras.html</id>
+        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-install-software-for-canon-cameras/"/>
+        <id>https://github-pages.github.io/helpfromfriend.com/how-to-install-software-for-canon-cameras/</id>
 
         <updated>2021-05-01T06:06:11+12:00</updated>
             <summary>
@@ -308,8 +308,8 @@ There is more info in <a title="Install Canon camera software without CD" href="
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-fix-google-sync-authentication-errors.html"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-fix-google-sync-authentication-errors.html</id>
+        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-fix-google-sync-authentication-errors/"/>
+        <id>https://github-pages.github.io/helpfromfriend.com/how-to-fix-google-sync-authentication-errors/</id>
 
         <updated>2021-05-01T06:06:11+12:00</updated>
             <summary>
@@ -332,8 +332,8 @@ After that I realized what actually happened. Some day I was trying to install G
         <author>
             <name>nztomas</name>
         </author>
-        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-remove-andquotlike-thisandquot-from-google-reader.html"/>
-        <id>https://github-pages.github.io/helpfromfriend.com/how-to-remove-andquotlike-thisandquot-from-google-reader.html</id>
+        <link href="https://github-pages.github.io/helpfromfriend.com/how-to-remove-andquotlike-thisandquot-from-google-reader/"/>
+        <id>https://github-pages.github.io/helpfromfriend.com/how-to-remove-andquotlike-thisandquot-from-google-reader/</id>
 
         <updated>2021-05-01T06:06:11+12:00</updated>
             <summary>

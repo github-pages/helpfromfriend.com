@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://github-pages.github.io/helpfromfriend.com/sitemap.xml

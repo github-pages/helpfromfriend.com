@@ -3,7 +3,7 @@
     <title>Help from a friend</title>
     <link href="https://helpfromfriend.com/feed.xml" rel="self" />
     <link href="https://helpfromfriend.com" />
-    <updated>2021-05-17T21:19:30+12:00</updated>
+    <updated>2021-05-17T21:28:04+12:00</updated>
     <author>
         <name>nztomas</name>
     </author>
@@ -20,7 +20,7 @@
             <category term="Azure Pipelines"/>
             <category term="Azure"/>
 
-        <updated>2021-05-17T21:19:30+12:00</updated>
+        <updated>2021-05-17T21:28:04+12:00</updated>
             <summary>
                 <![CDATA[
                     Classic and YAML pipelines There are two flavours of pipelines in the azure devops. The Classic (driven by user interface)&hellip;

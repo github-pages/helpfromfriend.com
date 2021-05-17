@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Azure Pipelines - Basics - Help from a friend</title><meta name="description" content="Classic and YAML pipelines There are two flavours of pipelines in the azure devops. The Classic (driven by user interface)&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://helpfromfriend.com/azure-pipelines-basics/"><link rel="alternate" type="application/atom+xml" href="https://helpfromfriend.com/feed.xml"><link rel="alternate" type="application/json" href="https://helpfromfriend.com/feed.json"><meta property="og:title" content="Azure Pipelines - Basics"><meta property="og:site_name" content="Help from a friend"><meta property="og:description" content="Classic and YAML pipelines There are two flavours of pipelines in the azure devops. The Classic (driven by user interface)&hellip;"><meta property="og:url" content="https://helpfromfriend.com/azure-pipelines-basics/"><meta property="og:type" content="article"><style>:root{--body-font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--heading-font:var(--body-font);--logo-font:var(--body-font);--menu-font:var(--body-font)}</style><link rel="stylesheet" href="https://helpfromfriend.com/assets/css/style.css?v=98c505e3b7b685d228871d964463406f"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://helpfromfriend.com/azure-pipelines-basics/"},"headline":"Azure Pipelines - Basics","datePublished":"2021-05-16T18:49","dateModified":"2021-05-17T21:19","description":"Classic and YAML pipelines There are two flavours of pipelines in the azure devops. The Classic (driven by user interface)&hellip;","author":{"@type":"Person","name":"nztomas"},"publisher":{"@type":"Organization","name":"nztomas"}}</script><link rel="stylesheet" href="https://helpfromfriend.com/assets/css/prism.css?v=c24e54b608efbcddd241d436fd1f2e5c"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-348474-11"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-348474-11');</script></head><body><header class="header" id="js-header"><a href="https://helpfromfriend.com/" class="logo">Help from a friend</a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu"><span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span></button><ul class="navbar__menu"><li><a href="https://helpfromfriend.com/categories/azure-pipelines/" target="_self">Azure Pipelines</a></li></ul></nav></header><main><div class="wrapper"><article class="post"><header class="post__header"><h1 class="post__title">Azure Pipelines - Basics</h1><div class="post__meta"><br><ul class="post__tag"><li><a href="https://helpfromfriend.com/categories/azure/">Azure</a></li><li><a href="https://helpfromfriend.com/categories/azure-pipelines/">Azure Pipelines</a></li><li><a href="https://helpfromfriend.com/categories/cicd/">CI/CD</a></li></ul><div class="post__comments"><svg aria-hidden="true"><title>Comments</title><use xlink:href="https://helpfromfriend.com/assets/svg/svg-map.svg#comments"/></svg> <a href="https://helpfromfriend.com/azure-pipelines-basics/#comments" data-disqus-identifier="29" class="invert" rel="nofollow">0</a></div></div></header><div class="post__inner"><div class="post__entry"><h4>Classic and YAML pipelines</h4><p>There are two flavours of pipelines in the azure devops. The <strong>Classic</strong> (driven by user interface) and then <strong>YAML</strong> (also called multistage) pipelines. They both serve the same purpose - continuous integration (CI) and continuous delivery (CD) of your code.</p><p>There is one very significant difference between these two types. Classic pipelines are maintained via user interface and that brings in a few problems. It's very tedious to "copy" the pipeline into new project - you must manually "re-create" all tasks in the web interface. Also - there is not track of changes made to the pipeline - so if someone elses changes you pipeline, there is no way what that change was and also when it happened.</p><p>On the other side - YAML pipelines are defined in the code and they are usually part of you application repository. So you can apply all "pull request" policies and run different version of pipelines fro different branches if you wish. Also, since all changes are stored in git repo, it's very easy to rollback or "copy" pipelines into new projects. So for these reasons, we are going to focus on multistage pipelines in this serie.</p><h4>Building blocks</h4><p>On the top level of every YAML pipeline sits at least one "Stage" - each stage contains at least one "Job" and each job contains at least one "Step". </p><p>Stages are usually sets of jobs which are accomplishing a single logical event in lifecycle of your application. So you can have stage "Build", followed by "Test" and "Publish artifact". Or have a "Build, test and publish artifact" as a single stage followed by set of deployment stages for every environment. Stages run sequentially, next stage always waits for the previous to finish. You can control the flow between stages with manual approval checks.</p><p>Each jobs runs on single agent and they run run in parallel. You can chain them and control them with conditional logic. So within one stage you can first run job "Build application" and then trigger two jobs in paralel to execute "Unit tests" and "Integration tests". </p><p>The smallest unit of work in the YAML pipeline is called a Step. It can be as simple as one liner in bash, or more complicated as a special deployment of docker container into kubernetes cluster. Tasks run sequentailly and you can control their execution with special conditions, based on result of previous tasks or custom logic.</p><h4>Seting up your first pipeline</h4><p>First of all, you will need a place to store your YAML file. So create a new repository in your project, then go to Pipelines, click on "New Pipeline" button. Pick the repo you created in the first step and select "Starter Pipeline". Azure will generate a very basic pipeline for youbut copy and paste the following code into the editor.</p><pre><code class="language-yaml">trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: "BuildAndTest"
+  displayName: "Build and Test"
+  jobs:
+  - job: BuildAPI
+    displayName: Build API
+    steps:
+    - bash: "echo building API"
+  - job: BuildClient
+    displayName: Build Client
+    steps:
+    - bash: echo "building Client"
+  - job: Test
+    dependsOn:
+    - BuildAPI
+    - BuildClient
+    displayName: Test API &amp; Client
+    steps:
+    - bash: echo "testing API &amp; Client"
+  
+- stage: "DeployUAT"
+  displayName: Deploy to UAT
+  jobs:
+  - job: Deploy
+    steps:
+    - bash: echo "Deploying"
+  - job: E2E
+    dependsOn: Deploy
+    steps:
+    - bash: echo "Running E2E tests"
+
+- stage: "DeployPROD"
+  displayName: Deploy to PROD
+  jobs:
+  - job: Deploy
+    steps:
+    - bash: echo "Deploying"
+</code></pre><p>After  you hit "Save and Run", you should end up with following result. Congratulations, you've just successfuly ran your first multistage pipeline in azure devops!</p><figure class="post__image post__image--center"><img loading="lazy" src="https://helpfromfriend.com/media/posts/29/pipeline-2.png" sizes="(max-width: 48em) 100vw, 100vw" srcset="https://helpfromfriend.com/media/posts/29/responsive/pipeline-2-xs.png 300w, https://helpfromfriend.com/media/posts/29/responsive/pipeline-2-sm.png 480w, https://helpfromfriend.com/media/posts/29/responsive/pipeline-2-md.png 768w" alt="Pipeline Run" width="721" height="336"></figure><h4>How does it work</h4><p>Let's just quickly go through this sample pipeline from the top to bottom. You will notice that we used "dummy" bash steps to simulate all neccessary steps - but thats enough for this quick demonstration.</p><p>At first we declare when the pipeline should run using a <strong>trigger</strong>. So any time someone commits any code into the master branch, this pipeline will start execute it's code.</p><p>The <strong>pool</strong> keyword specify which image (or "operating system") should be used for the execution - in this case, we target latest version of ubuntu.</p><p>Then we start defining stages (remeber, stages run in sequence).</p><p>We call first stage "BuildAndTest" and give it a user friendly label "Build and Test". We specify three jobs in this pipelines. First two (BuildAPI and BuildClient) run simultaneously - the third depends on them and will start running after both of them successfuly finishes.</p><p>We use second stage for deployment and E2E tests in the UAT environment. So again, we define two jobs - first one (which triggers immediately) deploys our code. The second will wait for the deployment to finish (since we said "dependsOn") and then execute our E2E scripts.</p><p>Last stage will simply deploy the code to Production environment.</p><p>You can see more details when you click on any of the jobs in the UI - you should see a similar screen as below with all logs and context information from azure - plus you can also output them in the standard text log.</p><figure class="post__image post__image--center"><img loading="lazy" src="https://helpfromfriend.com/media/posts/29/pipeline-3.png" sizes="(max-width: 48em) 100vw, 100vw" srcset="https://helpfromfriend.com/media/posts/29/responsive/pipeline-3-xs.png 300w, https://helpfromfriend.com/media/posts/29/responsive/pipeline-3-sm.png 480w, https://helpfromfriend.com/media/posts/29/responsive/pipeline-3-md.png 768w" alt="Pipeline log" width="1063" height="907"></figure><p>In the next part of this series we will take deeper a look on parameters, variables and expressions - all of which you can use to make your pipelines as smart and complicated as possible.</p><p> </p></div><footer><div class="post__tags-share"></div><nav class="post__nav"><div class="post__nav__prev"><a class="post__nav__link" href="https://helpfromfriend.com/where-to-host-your-wordpress-site/" rel="prev">Previous Post<h3 class="h6">Where to host your wordpress site?</h3></a></div></nav></footer></div></article><div class="comments post__inner" id="comments"><h3 class="h5">Comments</h3><div id="disqus_thread"></div><script>var disqus_config = function () {
+                    this.page.url = '';
+            		this.page.identifier = '';
+                };
+            
+                var disqus_loaded = false;
+            
+                function publiiLoadDisqus() {
+                    if(disqus_loaded) {
+                        return false;
+                    }
+            
+                    var top = document.getElementById('disqus_thread').offsetTop;
+            
+                    if (!disqus_loaded && (window.scrollY || window.pageYOffset) + window.innerHeight > top) {
+                        disqus_loaded = true;
+            
+                        (function () {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://helpfromfriend-com.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    }
+                }
+            
+                publiiLoadDisqus();
+            
+                window.onscroll = function() {
+                    publiiLoadDisqus();
+                };</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript></div></div></main><footer class="footer"><div class="footer__copyright">2021 @ Helpfronfriend</div></footer><script>window.publiiThemeMenuConfig = {    
+      mobileMenuMode: 'sidebar',
+      animationSpeed: 300,
+      submenuWidth: 'auto',
+      doubleClickTime: 500,
+      mobileMenuExpandableSubmenus: true, 
+      relatedContainerForOverlayMenuSelector: '.navbar',
+   };</script><script defer="defer" src="https://helpfromfriend.com/assets/js/scripts.min.js?v=8b3e67b51e8c7a7d51b33f4a94ae4287"></script><script>var images = document.querySelectorAll('img[loading]');
+
+      for (var i = 0; i < images.length; i++) {
+         if (images[i].complete) {
+               images[i].classList.add('is-loaded');
+         } else {
+               images[i].addEventListener('load', function () {
+                  this.classList.add('is-loaded');
+               }, false);
+         }
+      }</script><script id="dsq-count-scr" src="https://helpfromfriend-com.disqus.com/count.js" async></script><script defer="defer" src="https://helpfromfriend.com/assets/js/prism.js?v=47d5f88818f12d682c3958fdea2b83bf"></script></body></html>
